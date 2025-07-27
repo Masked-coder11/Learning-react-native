@@ -1,0 +1,45 @@
+import { View } from "react-native";
+
+export default function App() {
+  return (
+    <View
+      style={{
+        backgroundColor: "white",
+        flex: 1,
+        flexDirection: "row", // colum makes the main axis vertical, row makes it horizontal
+
+        justifyContent: "center", // for vertical
+
+        alignItems: "center", // for horiontal
+        // flexWrap: "wrap",
+
+        // alignContent: "center",
+      }}
+    >
+      <View
+        style={{
+          width: 90,
+          height: 90,
+          backgroundColor: "tomato",
+        }}
+      />
+      <View
+        style={{
+          width: 90,
+          height: 90,
+          backgroundColor: "grey",
+          bottom: 20,
+          left: 20,
+          position:"absolute" //default value is relative
+        }}
+      />
+      <View
+        style={{
+          width: 90,
+          height: 90,
+          backgroundColor: "green",
+        }}
+      />
+    </View>
+  );
+}
