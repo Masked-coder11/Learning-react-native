@@ -1,0 +1,78 @@
+import {
+  StyleSheet,
+  Text,
+  View,
+  SafeAreaView,
+  Alert,
+  Image,
+  Button,
+  TouchableOpacity,
+  Pressable,
+  ScrollView,
+  Platform,
+  ActivityIndicator,
+} from "react-native";
+
+export default function App() {
+  return (
+    <SafeAreaView style={styles.container}>
+      {/* <Text>
+        This is {Platform.OS === "android" ? "Android" : "IOS"} Device
+      </Text>
+      <ActivityIndicator />
+      <ActivityIndicator size={"large"} color={"blue"}/> */}
+      <View style={styles.view1}>
+        <Text style={styles.text1}>Hello World</Text>
+        <Text style={styles.text2}>How are you</Text>
+      </View>
+
+      <View style={styles.view2}>
+        <View style={styles.childView}></View>
+      </View>
+
+      <View style={styles.view3}></View>
+    </SafeAreaView>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: Platform.OS === "android" ? "white" : "grey",
+    justifyContent: "center",
+  },
+  view1: {
+    height: 200,
+    width: 200,
+    backgroundColor: "red",
+    justifyContent: "center",
+    alignItems: "center",
+    marginBottom: 50,
+  },
+  text1: {
+    fontSize: 50,
+  },
+  text2: {
+    fontSize: 200,
+  },
+  view2: {
+    backgroundColor: "aqua",
+    height: 150,
+    width: 150,
+    marginTop: 50,
+    marginLeft: 100,
+    marginVertical: 40,
+    paddingTop:40,
+    paddingLeft:40
+  },
+  view3: {
+    backgroundColor: "black",
+    height: 150,
+    width: 150,
+  },
+  childView:{
+    height:50,
+    width:50,
+    backgroundColor:"red"
+  }
+});
