@@ -1,0 +1,39 @@
+import { ImageBackground, SafeAreaView, Text, TextInput } from "react-native";
+import { useState } from "react";
+
+export default function App() {
+  const [tInputValue, setTInputValue] = useState("");
+
+  return (
+    <SafeAreaView
+      style={{
+        backgroundColor: "#fff",
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <TextInput
+        style={{
+          height: 40,
+          width: "80%",
+          borderRadius: 15,
+          borderColor: "grey  ",
+          borderWidth: 1,
+        }}
+        placeholder="Your name"
+        keyboardType="url"
+        // secureTextEntry={true}
+        // multiline={true}
+        editable={true}
+        // controlling the text
+        value={tInputValue}
+        onChangeText={(value) => {
+          setTInputValue(value);
+          console.log(tInputValue);
+        }}
+      />
+      <Text>Hello World</Text>
+    </SafeAreaView>
+  );
+}
