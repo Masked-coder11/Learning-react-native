@@ -1,0 +1,44 @@
+import { View, Dimensions } from "react-native";
+import { scale, verticalScale, s, vs } from "react-native-size-matters";
+
+export default function App() {
+  // Percentage
+  // dimensions
+  // libraries or responsive
+
+  // console.log(Dimensions.get("screen"));
+
+  // const PHONE_HEIGHT = Dimensions.get("screen").height;
+  // const PHONE_WIDTH = Dimensions.get("screen").width;
+
+  return (
+    <View
+      style={{
+        backgroundColor: "white",
+        flex: 1,
+      }}
+    >
+      {/* <View
+        style={{
+          width: PHONE_WIDTH,
+          height: PHONE_HEIGHT / 2,
+          backgroundColor: "tomato",
+        }}
+      /> */}
+      {/* <View
+        style={{
+          width: scale(300),
+          height: verticalScale(600),
+          backgroundColor: "tomato",
+        }}
+      /> */}
+      <View
+        style={{
+          width: s(300),
+          height: vs(600),
+          backgroundColor: "tomato",
+        }}
+      />
+    </View>
+  );
+}
